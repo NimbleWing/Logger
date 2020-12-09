@@ -1,0 +1,62 @@
+{
+  "name": "@nwing/logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "build": "babel src -d dist",
+    "lint": "eslint src",
+    "semantic-release": "semantic-release",
+    "test": "mocha test/**/index.test.js --recursive --require @babel/register"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "chai": "^4.2.0",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ghooks": "^2.0.4",
+    "mocha": "^8.2.1",
+    "semantic-release": "^17.3.0",
+    "std-mocks": "^1.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "signale": "^1.4.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NimbleWing/logger.git"
+  },
+  "author": "NimbleWing (http://github.com/NimbleWing)",
+  "bugs": {
+    "url": "https://github.com/NimbleWing/logger/issues"
+  },
+  "homepage": "https://github.com/NimbleWing/logger#readme"
+}
