@@ -1,7 +1,7 @@
 {
   "name": "@nwing/logger",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
     "build": "babel src -d dist",
@@ -44,6 +44,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "package.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "dist/"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "signale": "^1.4.0",
